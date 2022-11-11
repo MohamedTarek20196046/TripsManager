@@ -1,0 +1,13 @@
+<H1 style="text-align:center ;">Stations Update Form!</H1>
+<div class="container">
+    <form>
+    <div class="form-group">
+      <label for="name">Station Name :</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Enter Station name" [(ngModel)]="s.name">
+    </div>
+      <br>
+      <div>
+        <button type="submit" (click)="UpdateStation(s.id)"class="btn btn-primary float-end" style="width: 200px ;">submit</button>
+      </div>
+  </form>
+</div>
