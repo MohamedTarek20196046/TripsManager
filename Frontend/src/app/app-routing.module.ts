@@ -13,6 +13,8 @@ const routes: Routes = [
   {path : 'Update-Trip',component: UpdateTripComponent},
   {path : 'Update-Station',component: UpdateStationComponent},
   {path : 'Update-Admin',component: UpdateAdminComponent},
+  {path : 'home',component: HomeComponent},
+  {path: '',redirectTo:'home',pathMatch:'full'}
 ];
 
 @NgModule({
