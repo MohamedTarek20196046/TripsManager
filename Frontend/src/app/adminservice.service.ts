@@ -52,5 +52,18 @@ export class AdminserviceService {
   {
     this.temp=t;
   }
-  
+  unlock()
+  {
+    
+      console.log('success')
+      const users = document.querySelector('#Admins')
+      const Trips = document.querySelector('#Trips')
+      const Stations = document.querySelector('#Stations') 
+      addEventListener('click',()=>
+      {
+        users?.classList.remove('disabled')
+        Trips?.classList.remove('disabled')
+        Stations?.classList.remove('disabled')
+      })
+  }
 }
