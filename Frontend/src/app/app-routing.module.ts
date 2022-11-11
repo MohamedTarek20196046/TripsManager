@@ -6,6 +6,7 @@ import { StationsListComponent } from './stations-list/stations-list.component';
 import { UpdateTripComponent } from './update-trip/update-trip.component';
 import { UpdateAdminComponent } from './update-admin/update-admin.component';
 import { UpdateStationComponent } from './update-station/update-station.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 const routes: Routes = [
   {path : 'Trip',component: TripsListComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path : 'Update-Station',component: UpdateStationComponent},
   {path : 'Update-Admin',component: UpdateAdminComponent},
   {path : 'SignUp',component: SignUpComponent},
+  {path : 'SignIn',component: SignInComponent},
   {path : 'home',component: HomeComponent},
   {path: '',redirectTo:'home',pathMatch:'full'}
 ];
