@@ -4,7 +4,9 @@ name: Project_Compose
 services:
 
   database:
-    image: mysql2:latest
+    build: 
+      context: ./
+      dockerfile: mysql.Dockerfile
     container_name: mysql_Compose
     environment:
       - MYSQL_ROOT_PASSWORD=$MYSQL_PASSWORD
