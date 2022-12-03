@@ -1,0 +1,42 @@
+version: '3.6'
+
+name: Project_Compose
+services:
+
+  database:
+    image: mysql2:latest
+    container_name: mysql_Compose
+    environment:
+      - MYSQL_ROOT_PASSWORD=$MYSQL_PASSWORD
+    volumes:
+      - DB_Container:/var/lib/mysql
+    ports:
+      - $DB_LOCAL_PORT:$DB_CONTAINER_PORT
+    env_file: ./.env
+
+  frontend:
+    build: 
+      context: ./tools
+      dockerfile: Dockerfile
+    container_name: frontend_Compose
+    ports:
+    -   $FE_LOCAL_PORT:$FE_CONTAINER_PORT
+    env_file: ./.env
+
+  backend:
+    build: 
+      context: ./BackEnd
+      dockerfile: Dockerfile
+    container_name: backend_Compose
+    ports:
+    -   $BE_LOCAL_PORT:$BE_CONTAINER_PORT
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://database:$DB_CONAINER_PORT/new_schema?useSSL=false&allowPublicKeyRetrieval=true
+    depends_on:
+    - database
+    env_file: ./.env
+
+volumes:
+  DB_Container:
+    external: true
+    name: DB_Container
