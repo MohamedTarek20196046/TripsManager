@@ -6,7 +6,7 @@ import { Stations } from './stations';
   providedIn: 'root'
 })
 export class StationserviceService {
-  baseURL="http://localhost:8080/station"
+  baseURL="https://back-end-crt-20196009-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/station"
   id?:Number;
   constructor(private httpClient: HttpClient) { }
 
