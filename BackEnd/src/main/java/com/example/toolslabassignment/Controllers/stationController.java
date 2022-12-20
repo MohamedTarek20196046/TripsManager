@@ -8,7 +8,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/station")
-@CrossOrigin(origins = "http://localhost:4200/")
+@CrossOrigin(allowedHeaders = "*", origins = "*")
 public class stationController {
     @Autowired
     StationService stationservice;
