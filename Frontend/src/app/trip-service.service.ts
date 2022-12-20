@@ -7,8 +7,8 @@ import { Trips } from './trips';
   providedIn: 'root'
 })
 export class TripServiceService {
-  baseURL="http://localhost:8080/Trip"
-  UpdateURL="http://localhost:8080/Admin"
+  baseURL="https://back-end-crt-20196009-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/Trip"
+  UpdateURL="https://back-end-crt-20196009-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/Admin"
   id?:Number;
   constructor(private httpClient: HttpClient) { }
 
