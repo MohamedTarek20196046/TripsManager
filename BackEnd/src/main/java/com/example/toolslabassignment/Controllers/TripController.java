@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/Trip")
-@CrossOrigin(origins = "http://localhost:4200/")
+@CrossOrigin(allowedHeaders = "*", origins = "*")
 public class TripController {
     @Autowired
     TripService tripservice;
